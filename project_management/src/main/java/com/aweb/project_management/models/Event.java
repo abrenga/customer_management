@@ -1,17 +1,22 @@
 package com.aweb.project_management.models;
 
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+@Entity
 @Table
-public class Agenda {
+public class Event {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String agenda;
+    private String appoiment;
     private LocalDateTime date;
-    public Agenda() {
+    public Event() {
 
     }
+
 
     public int getId() {
         return id;
@@ -19,11 +24,11 @@ public class Agenda {
     public void setId(int id) {
         this.id = id;
     }
-    public String getAgenda() {
-        return agenda;
+    public String getAppoiment() {
+        return appoiment;
     }
-    public void setAgenda(String agenda) {
-        this.agenda = agenda;
+    public void setAppoiment(String agenda) {
+        this.appoiment = agenda;
     }
     public LocalDateTime getDate() {
         return date;
