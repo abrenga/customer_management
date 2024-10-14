@@ -11,7 +11,6 @@ public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String appoiment;
     private LocalDateTime date;
     public Event() {
 
@@ -24,12 +23,7 @@ public class Event {
     public void setId(int id) {
         this.id = id;
     }
-    public String getAppoiment() {
-        return appoiment;
-    }
-    public void setAppoiment(String agenda) {
-        this.appoiment = agenda;
-    }
+
     public LocalDateTime getDate() {
         return date;
     }
